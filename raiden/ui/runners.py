@@ -94,7 +94,6 @@ class NodeRunner:
         try:
             app_ = run_app(**self._options)
         except (ConnectionError, ConnectTimeout, RequestsConnectionError, ReadTimeoutError):
-            print(COMMUNICATION_ERROR)
             # TODO: Fix the cyclic import among ui.runners and ui.cli
             from raiden.ui.cli import ETH_RPC_CONFIG_OPTION
 
